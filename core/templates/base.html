@@ -1,0 +1,222 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lavandière Industrie</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+    background: #fafafa;
+    color: #333333;
+}
+
+.contact {
+  background: #04b8ff;
+  position: relative;
+  height: 92vh;
+}
+
+.contact-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #f1f7f6;
+  padding-bottom: 0.5rem;
+}
+
+.contact-content .mail {
+  color: #f0f0e6;
+  padding-bottom: 0.2rem;
+  font-size: 1rem;
+}
+
+.contact-content .links {
+  color: #f0f0e6;
+  padding: 0.5rem;
+  padding-bottom: 1.8rem;
+  font-size: 1rem;
+}
+
+.contact-content a {
+  text-decoration: none;
+  color: #f0f0e6;
+  padding: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-content a:hover {
+  color: #0f0f0e;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.fade-in-text {
+  font-family: Arial;
+  font-size: 50px;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="{% url 'accueil'%}"><img src="{% static 'Logo_Lavandière_01.jpg' %}" width="30" height="30" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'commande'%}">Programmer une Livraison ou un Dépôt <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact'%}">Contactez-nous</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'be_partners'%}">Devenir Partenaire</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'partners'%}">Nos Partenaires</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'pressing'%}">Nos Pressings</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'services'%}">Nos Services</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about'%}">Qui Sommes-Nous ?</a>
+                  </li>
+                  
+              </ul>
+
+    </div>
+    
+          <span class="navbar-text">
+            <ul><li><a href="{%url 'gallery'%}">Gallerie</a></li></ul>
+            
+          </span>
+        </div>
+      </nav>
+
+      <br>
+      
+  <section class="about-me" id="about">
+    {%if messages %}
+        {%for message in messages %}
+        <div class="alert {{ message.tags }} alert-dismissible fade show" role="alert">
+            {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+
+        {%endfor%}
+
+        {%endif%}
+   
+    <hr>
+    
+<br>
+
+    </div>
+    <div class="container">
+        {% block content %}
+
+        {% endblock content %}
+
+    </div>
+   
+    <hr>
+
+    <div class="col-md-6 offset-md-3">
+      <div class="container">
+
+        <div class="row">
+            <div class="card">
+                <a class="btn btn-warning" href="{% url 'commande'%}" target="blank"> programmer une Livraison ou un Dépôt</a>
+            
+            </div>
+        
+            <div class="card">
+                <a class="btn btn-secondary" href="{% url 'be_partners'%}" target="blank"> Devenir Partenaire</a>
+            
+            </div>
+        
+          </div>
+    
+      </div>
+
+    </div>
+
+   
+      <hr>
+  </section>
+  <br>
+  <footer>
+
+    <div class="contact" id="contact-me">
+        <div class="container">
+          <div class="contact-content">
+            <h2>Contactez Nous</h2>
+            <p class="mail">
+              Contactez-nous <i class="fas fa-arrow-right"></i> pressingkledumali@gmail.com
+            </p>
+            <p class="links">Ou Trouvez-nous sur:</p>
+            <a href="https://www.tiktok.com/@lavandiere_industrie?is_from_webapp=1&sender_device=pc" target="blank"><i class="fab fa-tiktok">
+                Tiktok</i></a>
+            <a href="https://www.facebook.com/profile.php?id=100094766725433&show_switched_tooltip=false" target="blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://twitter.com/Lavan_diere_ind" target="blank"><i class="fab fa-twitter"> Twitter</i></a>
+            <a href="https://www.instagram.com/lavan_diereindustrie/" target="blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <h2>Bamako-Mali</h2>
+            <h2>00223 70 22 33 22</h2>
+          </div>
+        </div>
+        <img width="200px" height="200px" src="{% static 'Logo_Lavandière_01.jpg' %}" alt="image" />
+       
+        
+      </div>
+    
+      <p>© 2023 - Lanvandière Industrie. All Rights Reserved.</p>
+
+  </footer>
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+</body>
+
+</html>
+

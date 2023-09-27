@@ -1,0 +1,1411 @@
+ <!-- <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: #0fc8f6;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+/* ////........Navbar.......//// */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.menu-items {
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  padding: 1rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #f0f0e6;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+.menu-items a:hover {
+  border-bottom: 2px solid #f0f0e6;
+}
+
+.navbar .logo {
+  order: 1;
+  color: #f0f0e6;
+  font-size: 2rem;
+}
+
+/* ////........Home Content........//// */
+
+.home-content .name {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e2e6e7;
+  width: 100%;
+  text-align: center;
+}
+
+.home-content .name h1 {
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.home-content .name p {
+  color: #f0f0e6;
+  font-size: 1.5rem;
+}
+
+.angle-down-icon {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  border: 3px solid #07374a;
+  border-radius: 50%;
+}
+
+.angle-down-icon a {
+  text-decoration: none;
+  color: #07374a;
+  padding: 1rem;
+}
+
+/* ////........About Me........//// */
+
+.about-me {
+  background-color: #f0f0e6;
+  padding: 6rem 0;
+}
+
+.about-me .about-heading {
+  color: #25b79f;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.about-content img {
+  height: 200px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  color: #161615;
+  padding: 0 2.3rem;
+  text-align: center;
+}
+
+.skills .skills-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #25b79f;
+  text-align: center;
+}
+
+.about-me .about-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-content .left-content {
+  flex-basis: 45%;
+  text-align: center;
+}
+
+.about-content .right-content {
+  flex-basis: 45%;
+}
+
+/* ///.....Skill Bar....../// */
+
+.skills-bar {
+  padding: 25px 30px;
+}
+
+.skills-bar .bar {
+  margin: 25px 0;
+}
+
+.skills-bar .bar .info span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skills-bar .bar .info {
+  margin-bottom: 8px;
+  color: #0c0c0c;
+}
+
+.skills-bar .bar .progress-line {
+  position: relative;
+  height: 10px;
+  width: 550px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span {
+  position: absolute;
+  background: #25b79f;
+  height: 100%;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.progress-line .html {
+  width: 100%;
+}
+.progress-line .css {
+  width: 100%;
+}
+.progress-line .bootstrap {
+  width: 100%;
+}
+.progress-line .javascript {
+  width: 100%;
+}
+.progress-line .c {
+  width: 100%;
+}
+
+.bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  right: 0;
+  top: -12px;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-style: #f0f0f0;
+  border-top-color: #f0f0f0;
+}
+
+.bar .progress-line span::after {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  color: #07374a;
+  font-size: 12px;
+  font-weight: 700;
+  background: #f0f0f0;
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+
+.progress-line .html::after {
+  content: "80%";
+}
+.progress-line .css::after {
+  content: "70%";
+}
+.progress-line .bootstrap::after {
+  content: "50%";
+}
+.progress-line .javascript::after {
+  content: "50%";
+}
+.progress-line .c::after {
+  content: "50%";
+}
+
+.navbar.solid {
+  background-color: #07374a;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px rgb(7 55 74 / 20%);
+  z-index: 500;
+}
+
+.navbar.solid .navbar-brand {
+  display: inline-block;
+  color: #f0f0e6;
+  transition: color 1s ease 0s;
+}
+
+.navbar-brand {
+  display: none;
+  color: #f0f0e6;
+  font-weight: 400;
+}
+
+.work-arrow {
+  margin: 2rem 0;
+}
+
+.work-arrow a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #25b79f;
+}
+
+.work-arrow-2 {
+  margin: 2rem 0;
+}
+
+.work-arrow-2 a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #25b79f;
+  display: none;
+}
+
+/* ////.....Portfolio......///// */
+
+.portfolio {
+  background: #25b79f;
+  padding: 6rem 0;
+}
+
+.proj-heading h1 {
+  text-align: center;
+  color: #07374a;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 3rem 0;
+}
+
+.proj-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proj-1 img {
+  height: 330px;
+  width: 380px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 20px 10px -10px rgb(37 41 52 / 31%);
+  margin-right: 1.7rem;
+}
+
+.proj-1 .proj1-details {
+  width: 32rem;
+}
+
+.proj-1 .proj1-details i {
+  font-size: 1.5rem;
+  color: #07374a;
+}
+
+.proj-1 .proj1-details h2 {
+  font-size: 2rem;
+  color: #07374a;
+}
+
+.proj-1 .proj1-details p {
+  font-size: 1.3rem;
+  color: #07374a;
+  font-weight: 600;
+}
+
+.proj-1 .proj1-details button {
+  background: #f0f0e6;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  width: 150px;
+  border: none;
+  border-bottom: 2px solid #07374a;
+}
+
+.proj-1 .proj1-details button a {
+  text-decoration: none;
+  color: #07374a;
+  font-size: 1.1rem;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+.proj-1 .proj1-details button .fas {
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  transition: 0.2s ease-in-out;
+}
+
+.proj-1 .proj1-details button:hover {
+  background: #07374a;
+}
+
+.proj-1 .proj1-details button:hover a,
+.proj-1 .proj1-details button:hover .fas {
+  color: #f0f0e6;
+}
+
+/* ////.....proj2.....//// */
+
+.proj-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.proj-2 img {
+  height: 330px;
+  width: 380px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 20px 10px -10px rgb(37 41 52 / 31%);
+  margin-right: 1.7rem;
+}
+
+.proj-2 .proj2-details {
+  width: 32rem;
+}
+
+.proj-2 .proj2-details i {
+  font-size: 1.5rem;
+  color: #07374a;
+}
+
+.proj-2 .proj2-details h2 {
+  font-size: 2rem;
+  color: #07374a;
+}
+
+.proj-2 .proj2-details p {
+  font-size: 1.3rem;
+  color: #07374a;
+  font-weight: 600;
+}
+
+.proj-2 .proj2-details button {
+  background: #f0f0e6;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  width: 150px;
+  border: none;
+  border-bottom: 2px solid #07374a;
+}
+
+.proj-2 .proj2-details button a {
+  text-decoration: none;
+  color: #07374a;
+  font-size: 1.1rem;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+
+.proj-2 .proj2-details button .fas {
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  transition: 0.2s ease-in-out;
+}
+
+.proj-2 .proj2-details button:hover {
+  background: #07374a;
+}
+
+.proj-2 .proj2-details button:hover a,
+.proj-2 .proj2-details button:hover .fas {
+  color: #f0f0e6;
+}
+
+.more-work {
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+}
+
+.more-work p {
+  font-size: 1.6rem;
+  color: #07374a;
+  font-weight: 500;
+}
+
+.more-work a {
+  text-decoration: none;
+  color: #f0f0e6;
+  font-size: 1.3rem;
+}
+
+.more-work a:hover {
+  border-bottom: 2px solid #f0f0e6;
+}
+
+/* ////......Contact......///// */
+
+.contact {
+  background: #07374a;
+  position: relative;
+  height: 92vh;
+}
+
+.contact-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #25b79f;
+  padding-bottom: 0.5rem;
+}
+
+.contact-content .mail {
+  color: #f0f0e6;
+  padding-bottom: 0.2rem;
+  font-size: 1rem;
+}
+
+.contact-content .links {
+  color: #25b79f;
+  padding: 0.5rem;
+  padding-bottom: 1.8rem;
+  font-size: 1rem;
+}
+
+.contact-content a {
+  text-decoration: none;
+  color: #25b79f;
+  padding: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-content a:hover {
+  color: #f0f0e6;
+}
+
+/* ////......Media query......//// */
+
+@media (max-width: 500px) {
+  html {
+    font-size: 60%;
+  }
+
+  .about-content .left-content {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .about-content .right-content {
+    flex-basis: 100%;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  .skills-bar .bar .progress-line {
+    width: 100%;
+  }
+
+  .work-arrow {
+    display: none;
+  }
+
+  .right-content h1 {
+    margin-top: 3.2rem;
+  }
+
+  .proj-1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .proj-1 img {
+    height: 230px;
+    width: 290px;
+    margin-bottom: 0.5rem;
+  }
+
+  .proj-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .proj-2 img {
+    height: 250px;
+    width: 290px;
+    margin-bottom: 0.5rem;
+  }
+
+  .work-arrow-2 a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #25b79f;
+    display: block;
+    text-align: center;
+  }
+
+  .contact-content {
+    width: 100%;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .about-content .left-content {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .about-content .right-content {
+    flex-basis: 100%;
+  }
+
+  .skills {
+    width: 100%;
+  }
+
+  .skills-bar .bar .progress-line {
+    width: 100%;
+  }
+
+  .work-arrow {
+    display: none;
+  }
+
+  .right-content h1 {
+    margin-top: 3.2rem;
+  }
+
+  .proj-1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .proj-1 img {
+    height: 240px;
+    width: 290px;
+    margin-bottom: 0.5rem;
+  }
+
+  .proj-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .proj-2 img {
+    height: 240px;
+    width: 290px;
+    margin-bottom: 0.5rem;
+  }
+
+  .work-arrow-2 a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #25b79f;
+    display: block;
+    text-align: center;
+  }
+
+  .contact-content {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  html {
+    font-size: 70%;
+  }
+
+  .about-content .left-content {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .about-content .right-content {
+    flex-basis: 100%;
+  }
+
+  .skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .work-arrow {
+    display: none;
+  }
+
+  .left-content h1 {
+    margin-top: 3.2rem;
+    text-align: center;
+  }
+
+  .right-content h1 {
+    margin-top: 3.2rem;
+    text-align: center;
+  }
+
+  .work-arrow-2 a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #25b79f;
+    display: block;
+    text-align: center;
+  }
+
+  .contact-content {
+    width: 100%;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .header {
+    height: 90vmax;
+  }
+}
+    </style> -->
+</head>
+
+<body>
+  <!-- <header class="header">
+    <nav class="navbar">
+      <div class="navbar-container container">
+        <div>
+          <h1 class="navbar-brand">Lavandière - Kledu Pressing</h1>
+        </div>
+        <ul class="menu-items">
+          <li><a href="#about">Qui Sommes-Nous ?</a></li>
+          <li><a href="#my-works">Nos Services</a></li>
+          <li><a href="#contact-me">Contact</a></li>
+          <li><a href="#contact-me">Programmer un Dépôt ou une Livraison</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="home-content" id="home-page">
+      <div class="name">
+        <h1>Bienvenue sur le Site de la Lanvandière !</h1>
+        <p>l'endroit où vos linges sont entre de bonnes mains</p>
+      </div>
+      <div class="angle-down-icon">
+        <a href="#about"><i class="fas fa-angle-down"></i></a>
+      </div>
+    </div>
+  </header>
+  <section class="about-me" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="left-content">
+          <div>
+            <h1 class="about-heading">Qui Sommmes-Nous ?</h1>
+          </div>
+          <img src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="image" />
+          <p>
+            La Lanvandière est une entreprise spécialisée dans le traitement de linge
+          </p>
+          <div class="work-arrow">
+            <p>
+              <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
+            </p>
+          </div>
+        </div>
+        <div class="skills">
+          <div class="right-content">
+            <div>
+              <h1 class="skills-heading">Nos Compétences</h1>
+            </div>
+            <div class="skills-bar">
+              <div class="bar">
+                <div class="info">
+                  <span>Laverie</span>
+                </div>
+                <div class="progress-line"><span class="html"></span></div>
+                <div class="bar">
+                  <div class="info">
+                    <span>Repassage</span>
+                  </div>
+                  <div class="progress-line"><span class="css"></span></div>
+                  <div class="bar">
+                    <div class="info">
+                      <span>Teinture</span>
+                    </div>
+                    <div class="progress-line"><span class="bootstrap"></span></div>
+                    <div class="bar">
+                      <div class="info">
+                        <span>Lavages à Sec</span>
+                      </div>
+                      <div class="progress-line"><span class="javascript"></span></div>
+                      <div class="bar">
+                        <div class="info">
+                          <span>Raccomodage</span>
+                        </div>
+                        <div class="progress-line"><span class="c"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="work-arrow-2">
+              <p>
+                <a href="#my-works"> Ils nous font Confiance <i class="fas fa-arrow-down"></i></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="my-works">
+    <div class="portfolio">
+      <div class="proj-heading">
+        <h1>Nos Partenaires</h1>
+      </div>
+      <div class="portfolio-content container">
+        <div class="proj-1">
+          <img src="https://i.postimg.cc/qM9TjGTG/Screenshot-80.png">
+          <div class="proj1-details">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+            <h2>Union Européenne</h2>
+            <p>Build Using HTML,CSS,JS</p>
+            <button><a href="https://github.com/sanketbodke/Restaurant-Website" target="blank">Allez sur leur Site <i
+                  class="fas fa-external-link-alt"></i></a>
+            </button>
+            <button><a href="https://fervent-lamarr-2bc6cf.netlify.app/" target="blank">Try it Live <i
+                  class="fas fa-external-link-alt"></i></a>
+            </button>
+          </div>
+        </div>
+
+        <div class="proj-2">
+          <img src="https://i.postimg.cc/FR848bSm/Screenshot-76.png">
+          <div class="proj2-details">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <h2>MINUSMA</h2>
+            <p>Build Using HTML,CSS</p>
+            <button><a href="https://github.com/sanketbodke/CodePen" target="blank"> Allez sur leur Site <i
+                  class="fas fa-external-link-alt"></i></a>
+            </button>
+            <button><a href="https://codepen.io/sanketbodke/pen/NWgKyZW" target="blank">Try it Live <i
+                  class="fas fa-external-link-alt"></i></a>
+            </button>
+          </div>
+
+        </div>
+        <div class="more-work">
+          <p>
+            Programmer
+          </p>
+          <a href="https://codepen.io/sanketbodke" target="blank">une Livraison ou un Dépôt</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="contact" id="contact-me">
+    <div class="container">
+      <div class="contact-content">
+        <h2>Contactez Nous</h2>
+        <p class="mail">
+          Contactez-nous <i class="fas fa-arrow-right"></i> mamadougandodiallo9@gmail.com
+        </p>
+        <p class="links">Ou Trouvez-nous sur:</p>
+        <a href="https://www.linkedin.com/in/sanket-bodake-995b5b205/" target="blank"><i class="fab fa-linkedin">
+            Linkedin</i></a>
+        <a href="https://codepen.io/sanketbodke" target="blank"><i class="fab fa-codepen"> CodePen</i></a>
+        <a href="https://github.com/sanketbodke" target="blank"><i class="fab fa-github"></i> Github</a>
+        <a href="https://dev.to/sanketbodake" target="blank"><i class="fab fa-dev"></i> Dev Community</a>
+        <a href="https://twitter.com/Sanket46171296" target="blank"><i class="fab fa-twitter"> Twitter</i></a>
+        <a href="https://www.instagram.com/imsanketbodke/" target="blank"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+    </div>
+  </div> -->
+
+  -------------------------------------------------------
+
+  <!-- <h1 class="skills-heading">Nos Compétences</h1>
+</div>
+<div class="skills-bar">
+  <div class="bar">
+    <div class="info">
+      <span>Laverie</span>
+    </div>
+    <div class="progress-line"><span class="html"></span></div>
+    <div class="bar">
+      <div class="info">
+        <span>Repassage</span>
+      </div>
+      <div class="progress-line"><span class="css"></span></div>
+      <div class="bar">
+        <div class="info">
+          <span>Teinture</span>
+        </div>
+        <div class="progress-line"><span class="bootstrap"></span></div>
+        <div class="bar">
+          <div class="info">
+            <span>Lavages à Sec</span>
+          </div>
+          <div class="progress-line"><span class="javascript"></span></div>
+          <div class="bar">
+            <div class="info">
+              <span>Raccomodage</span>
+            </div>
+            <div class="progress-line"><span class="c"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="work-arrow-2">
+  <p>
+    <a href="#my-works"> Ils nous font Confiance <i class="fas fa-arrow-down"></i></a>
+  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section> -->
+  
+-------------------------------------------------------
+
+<!-- <section id="my-works">
+  <div class="portfolio">
+    <div class="proj-heading">
+      <h1>Nos Partenaires</h1>
+    </div>
+    <div class="portfolio-content container">
+      <div class="proj-1">
+        <img src="https://i.postimg.cc/qM9TjGTG/Screenshot-80.png">
+        <div class="proj1-details">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <h2>Union Européenne</h2>
+          <p>Build Using HTML,CSS,JS</p>
+          <button><a href="https://github.com/sanketbodke/Restaurant-Website" target="blank">Allez sur leur Site <i
+                class="fas fa-external-link-alt"></i></a>
+          </button>
+          <button><a href="https://fervent-lamarr-2bc6cf.netlify.app/" target="blank">Try it Live <i
+                class="fas fa-external-link-alt"></i></a>
+          </button>
+        </div>
+      </div>
+
+      <div class="proj-2">
+        <img src="https://i.postimg.cc/FR848bSm/Screenshot-76.png">
+        <div class="proj2-details">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <h2>MINUSMA</h2>
+          <p>Build Using HTML,CSS</p>
+          <button><a href="https://github.com/sanketbodke/CodePen" target="blank"> Allez sur leur Site <i
+                class="fas fa-external-link-alt"></i></a>
+          </button>
+          <button><a href="https://codepen.io/sanketbodke/pen/NWgKyZW" target="blank">Try it Live <i
+                class="fas fa-external-link-alt"></i></a>
+          </button>
+        </div> -->
+
+        -------------------------------------------------------
+
+
+
+        <!-- <div class="container">
+
+    <div class="grid">
+
+        <h2> plus pro, plus propre !</h2>
+    <p>
+        La Lanvandière est une unité industrielle spécialisée dans le néttoyage de tout type de textile nous utilisons des équipements modernes, à la pointe de la technologie et totalement numérisés à la pointe des nouvelles technologies en terme de traitement numérisés.
+    </p>
+
+    </div>
+    
+    <h2> des Linges professionels !</h2>
+    <p>
+        la Lanvandière est à votre dispositon pour entretenir de manière durable votre linge professionnel.
+        
+        <ul>
+            <li>
+                Hôtelier
+            </li>
+            <li>
+                Hospitalier
+            </li>
+            <li>
+                Industrie
+            </li>
+            <li>
+                Tenues de Travail
+            </li>
+            <li>
+                Blouses
+            </li>
+            <li>
+                Bâches
+            </li>
+            <li>
+                Stores, etc.
+            </li>
+        </ul>
+    </p>
+</div> -->
+
+
+/* #sticky-container{
+    
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+} */
+
+
+/* .slider {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+ }
+  
+ .slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slider 12.5s infinite;
+ }
+  
+ .slider .slide:nth-child(1) {
+    background-image: url('https://images.unsplash.com/photo-1595356700395-6f14b5c1f33f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: 0s;
+ }
+ 
+ .slider .slide:nth-child(2) {
+    background-image: url('https://images.unsplash.com/photo-1591019052241-e4d95a5dc3fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: -2.5s;
+ }
+ 
+ .slider .slide:nth-child(3) {
+    background-image: url('https://images.unsplash.com/photo-1543373014-cfe4f4bc1cdf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: -5s;
+ }
+ 
+ .slider .slide:nth-child(4) {
+    background-image: url('https://images.unsplash.com/photo-1517430554953-a5ba4678fe85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: -7.5s;
+ }
+ 
+ .slider .slide:nth-child(5) {
+    background-image: url('https://images.unsplash.com/photo-1583161178154-c362b3459d29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');
+    animation-delay: -10s;
+ }
+ 
+ @keyframes slider {
+  0%, 16%, 100% {
+    transform: translateX(0);
+    animation-timing-function: ease;
+  }
+  20% {
+    transform: translateX(-100%);
+    animation-timing-function: step-end;
+  }
+  96% {
+    transform: translateX(100%);
+    animation-timing-function: ease;
+ 
+  }
+ } */
+
+
+
+ <!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+         .content-section {
+        background: #ffffff;
+        padding: 10px 20px;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+        margin-bottom: 20px;
+}
+        </style>
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Lavandière- Kledu Pressing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Commande</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            Le site de la Lanvandière en cours...
+          </span>
+        </div>
+      </nav>
+
+      <br>
+
+      
+   
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html> -->
+
+<!-- <body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-container container">
+        <div>
+          <h1 class="navbar-brand">Lavandière - Kledu Pressing</h1>
+        </div>
+        <ul class="menu-items">
+          <li><a href="#about">Qui Sommes-Nous ?</a></li>
+          <li><a href="#my-works">Nos Services</a></li>
+          <li><a href="#contact-me">Contact</a></li>
+          <li><a href="#contact-me">Programmer un Dépôt ou une Livraison</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="home-content" id="home-page">
+        <div class="container">
+
+            <div class="name">
+                <h1>Bienvenue sur le Site de la Lanvandière !</h1>
+                <p>l'endroit où vos linges sont entre de bonnes mains</p>
+              </div>
+
+        </div>
+     
+      <div class="angle-down-icon">
+        <a href="#about"><i class="fas fa-angle-down"></i></a>
+      </div>
+    </div>
+  </header> -->
+
+
+
+  /* margin-top: 5rem; */
+
+
+   <!-- <div class="angle-down-icon">
+            <a href="#about"><i class="fas fa-angle-down"></i></a>
+          </div> -->
+
+
+            <!-- <div class="col-md-6 offset-md-3">
+
+          <img width="200px" height="200px" src="{% static 'Logo_Lavandière_01.jpg' %}" alt="image" />
+
+        </div> -->
+        
+       
+            
+            <!-- <div class="work-arrow">
+                  <p>
+                  
+                  </p>
+            
+          </div>         -->
+        <!-- 
+
+          <div class="container" id="back">
+            
+            <span>
+              La Lanvandière est une entreprise spécialisée dans le traitement de linge
+          </span>
+    
+            </div>
+    
+            
+    
+            </div>
+           
+           
+        </div> -->
+
+
+
+        //     $(document).ready(function () {
+          //     $(window).scroll(function () {
+          //         // checks if window is scrolled more than 500px, adds/removes solid class
+          //         if ($(this).scrollTop() > 550) {
+          //             $('.navbar').addClass('solid');
+          //             $('.back-to-top').addClass('visible');
+          //         } else {
+          //             $('.navbar').removeClass('solid');
+          //             $('.back-to-top').removeClass('visible');
+          //         }
+          
+          //     });
+          // });
+          
+          
+          // $(document).ready(function () {
+          //     // Add smooth scrolling to all links
+          //     $("a").on('click', function (event) {
+          
+          //         // Make sure this.hash has a value before overriding default behavior
+          //         if (this.hash !== "") {
+          //             // Prevent default anchor click behavior
+          //             event.preventDefault();
+          
+          //             // Store hash
+          //             var hash = this.hash;
+          
+          //             // Using jQuery's animate() method to add smooth page scroll
+          //             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          //             $('html, body').animate({
+          //                 scrollTop: $(hash).offset().top
+          //             }, 800, function () {
+          
+          //                 // Add hash (#) to URL when done scrolling (default click behavior)
+          //                 window.location.hash = hash;
+          //             });
+          //         } // End if
+          //     });
+          // });
+
+
+
+          <!-- <div class="container">
+
+    <div class="card">
+        <img width="200px" height="200px" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="images">
+        <div class="card-body">
+            This is some text within a card body.
+          </div>
+    </div>
+
+    <br>
+
+    <div class="card">
+        <img width="200px" height="200px" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="images">
+    </div>
+
+    <br>
+
+    <div class="card">
+        <img width="200px" height="200px" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="images">
+    </div>
+
+    <br>
+
+    <div class="card">
+        <img width="200px" height="200px" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="images">
+    </div>
+
+    <br>
+
+    <div class="card">
+        <img width="200px" height="200px" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="images">
+    </div>
+
+</div>
+
+<br>
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div> -->
+  <!-- <div class="container">
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkcUffWKw2q2EHbcwdE-24YRtv-HRRvaEXMA&usqp=CAU" alt="">
+
+                <div class="card-body">
+                    <h5 class="card-title">P1 : HAMDALLAYE</h5>
+                    <p class="card-text">
+                        Some quick example text to build on
+                        the card title and make up the bulk
+                        of the card's content.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkcUffWKw2q2EHbcwdE-24YRtv-HRRvaEXMA&usqp=CAU" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                        Some quick example text to build on the
+                        card title and make up the bulk of the
+                        card's content.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+  </div> -->
+
+
+  <!-- <div class="card">
+    <div class="card-header">
+        <img width="200px" height="200px" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="images">    </div>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div> -->
+
+
+  
+
+
+<!-- <div class="container">
+
+    <div class="card">
+        <img width="200px" height="200px" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="images">
+        <div class="card-body">
+            This is some text within a card body.
+          </div>
+    </div>
+
+    <br>
+
+    <div class="card">
+        <img width="200px" height="200px" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="images">
+    </div>
+
+    <br>
+
+    <div class="card">
+        <img width="200px" height="200px" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="images">
+    </div>
+
+    <br>
+
+    <div class="card">
+        <img width="200px" height="200px" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="images">
+    </div>
+
+    <br>
+
+    <div class="card">
+        <img width="200px" height="200px" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="images">
+    </div>
+
+</div>
+
+<br>
+
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://i.postimg.cc/Hx4nChpH/fbavatar-1630400663387-6838396024049256103.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtJWwId3geKqBpEF6ec63t-CSL2H8iYuZ7vQ&usqp=CAU" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> -->
+
+  <!-- <div class="card">
+    <div class="card-header">
+        <img width="600px" height="600px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgLQiuOHp6mpZPIKSouxsHRRsSHreXND7ABA&usqp=CAU" alt="images">    </div>
+    <div class="card-body">
+      <h5 class="card-title">Blanchisserie</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>
+  <br>
+
+  <div class="card">
+    <div class="card-header">
+        <img width="600px" height="600px" src="data:image/jpeg;base64,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" alt="images">    </div>
+    <div class="card-body">
+      <h5 class="card-title">Location de linges</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>
+  <br>
+
+  <div class="card">
+    <div class="card-header">
+        <img width="600px" height="600px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8nasM4e5KxYeEsDvX5azO3cdNJTJNVXBjbw&usqp=CAU" alt="images">    </div>
+    <div class="card-body">
+      <h5 class="card-title">Pressing</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div> -->

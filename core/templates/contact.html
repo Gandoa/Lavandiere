@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+
+{% block content %}
+    <form action = "" method = "post">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4 fade-in-text">Faites nous Part de vos remarques et plaintes</legend>
+        {% csrf_token %}
+    {{ form|crispy }}
+    <input class="btn btn-primary"  type="submit" value="Valider">
+    
+    </form>
+
+
+
+{% endblock content %}

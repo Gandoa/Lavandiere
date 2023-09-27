@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<style>
+	.fade-in-text {
+  font-family: Arial;
+  font-size: 50px;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+</style>
+	<h2 class="fade-in-text">Programmer un Dépôt ou Livraison</h2>
+<div>
+	<form action = "" method = "POST">
+        {% csrf_token %}
+        <p>
+          renseignez le champs "code" si vous voulez effectuer une livraison
+        </p>
+	{{ form|crispy }}
+	<input class="btn btn-primary"  type="submit" value="Valider">
+	
+</form>
+</div>
+
+<br>
+
+{% endblock content %}
+
+<br>

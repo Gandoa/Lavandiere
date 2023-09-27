@@ -1,0 +1,406 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            text-decoration: none;
+            outline: none;
+        }
+        
+        a,
+        a:active,
+        a:focus {
+            color: #6f6f6f;
+            text-decoration: none;
+            transition-timing-function: ease-in-out;
+            -ms-transition-timing-function: ease-in-out;
+            -moz-transition-timing-function: ease-in-out;
+            -webkit-transition-timing-function: ease-in-out;
+            -o-transition-timing-function: ease-in-out;
+            transition-duration: .2s;
+            -ms-transition-duration: .2s;
+            -moz-transition-duration: .2s;
+            -webkit-transition-duration: .2s;
+            -o-transition-duration: .2s;
+        }
+        
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img {
+    max-width: 100%;
+    height: auto;
+}
+        section {
+            padding: 60px 0;
+           /* min-height: 100vh;*/
+        }
+
+.sec-title{
+  position:relative;
+  z-index: 1;
+  margin-bottom:60px;
+}
+
+.sec-title .title{
+  position: relative;
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  color: #00aeef;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.sec-title h2{
+  position: relative;
+  display: block;
+  font-size:40px;
+  line-height: 1.28em;
+  color: #222222;
+  font-weight: 600;
+  padding-bottom:18px;
+}
+
+.sec-title h2:before{
+  position:absolute;
+  content:'';
+  left:0px;
+  bottom:0px;
+  width:50px;
+  height:3px;
+  background-color:#d1d2d6;
+}
+
+.sec-title .text{
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+  color: #848484;
+  font-weight: 400;
+  margin-top: 35px;
+}
+
+.sec-title.light h2{
+  color: #ffffff;
+}
+
+.sec-title.text-center h2:before{
+  left:50%;
+  margin-left: -25px;
+}
+
+.list-style-one{
+  position:relative;
+}
+
+.list-style-one li{
+  position:relative;
+  font-size:16px;
+  line-height:26px;
+  color: #222222;
+  font-weight:400;
+  padding-left:35px;
+  margin-bottom: 12px;
+}
+
+.list-style-one li:before {
+    content: "\f058";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    display: block;
+    font-size: 18px;
+    padding: 0px;
+    color: #ff2222;
+    font-weight: 600;
+    -moz-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1.6;
+    font-family: "Font Awesome 5 Free";
+}
+
+.list-style-one li a:hover{
+  color: #44bce2;
+}
+
+.btn-style-one{
+  position: relative;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 10px 30px;
+  font-weight: 600;
+  overflow: hidden;
+  letter-spacing: 0.02em;
+  background-color: #00aeef;
+}
+
+.btn-style-one:hover{
+  background-color: #0794c9;
+  color: #ffffff;
+}
+.about-section{
+  position: relative;
+  padding: 120px 0 70px;
+}
+
+.about-section .sec-title{
+  margin-bottom: 45px;
+}
+
+.about-section .content-column{
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.about-section .content-column .inner-column{
+  position: relative;
+  padding-left: 30px;
+}
+
+.about-section .text{
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #848484;
+  font-weight: 400;
+}
+
+.about-section .list-style-one{
+  margin-bottom: 45px;
+}
+
+.about-section .btn-box{
+  position: relative;
+}
+
+.about-section .btn-box a{
+  padding: 15px 50px;
+}
+
+.about-section .image-column{
+  position: relative;
+}
+
+.about-section .image-column .text-layer{
+    position: absolute;
+    right: -110px;
+    top: 50%;
+    font-size: 325px;
+    line-height: 1em;
+    color: #ffffff;
+    margin-top: -175px;
+    font-weight: 500;
+}
+
+.about-section .image-column .inner-column{
+  position: relative;
+  padding-left: 80px;
+  padding-bottom: 0px;
+}
+.about-section .image-column .inner-column .author-desc{
+    position: absolute;
+    bottom: 16px;
+    z-index: 1;
+    background: orange;
+    padding: 10px 15px;
+    left: 96px;
+    width: calc(100% - 152px);
+    border-radius: 50px;
+}
+.about-section .image-column .inner-column .author-desc h2{
+    font-size: 21px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #fff;
+  margin: 0;
+}
+.about-section .image-column .inner-column .author-desc span{
+    font-size: 16px;
+    letter-spacing: 6px;
+    text-align: center;
+    color: #fff;
+  display: block;
+  font-weight: 400;
+}
+.about-section .image-column .inner-column:before{
+    content: '';
+    position: absolute;
+    width: calc(50% + 80px);
+    height: calc(100% + 160px);
+    top: -80px;
+    left: -3px;
+    background: transparent;
+    z-index: 0;
+    border: 44px solid #00aeef;
+}
+
+.about-section .image-column .image-1{
+  position: relative;
+}
+.about-section .image-column .image-2{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.about-section .image-column .image-2 img,
+.about-section .image-column .image-1 img{
+  box-shadow: 0 30px 50px rgba(8,13,62,.15);
+      border-radius: 46px;
+}
+
+.about-section .image-column .video-link{
+  position: absolute;
+  left: 70px;
+  top: 170px;
+}
+
+.about-section .image-column .video-link .link{
+  position: relative;
+  display: block;
+  font-size: 22px;
+  color: #191e34;
+  font-weight: 400;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 30px 50px rgba(8,13,62,.15);
+  -webkit-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.about-section .image-column .video-link .link:hover{
+  background-color: #191e34;
+  color: #fff
+}
+.fade-in-text {
+  font-family: Arial;
+  font-size: 50px;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+</style>
+
+
+
+<section class="about-section fade-in-text">
+    <div class="container">
+        <div class="row">                
+            <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                <div class="inner-column">
+                    <div class="sec-title">
+                        <span class="title">Présentation</span>
+                        <h1>PLUS PROPRE, PLUS PRO !</h1>
+                    </div>
+                    <div class="text"> La Lanvandière est une unité industrielle spécialisée dans le néttoyage de tout type de textile nous utilisons des équipements modernes, à la pointe de la technologie et totalement numérisés à la pointe des nouvelles technologies en terme de traitement numérisés.</div>
+                  <div class="text">
+La Lavandière répond aux exigences des normes internationales tout en veillant au respect de l'environnement en utilisant des installations qui fonctionnent à l'energie solaire et en recyclant les eaux usées. Chez nous l'hygiène est garantie ! Aussi bien dans nos locaux qu'auprès du personnel, qui sont protégés contre toute contamination.
+Nos produits et traitements utilisés poir le lavage éliminent les bactéries et les virus de votre linge.
+Aussi bien, tous nos produits sont certifiés ISO </div>
+<img src="data:image/png;base64,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" alt="">
+<hr>
+                    <div class="btn-box">
+                        <a href="{% url 'contact'%}" class="theme-btn btn-style-one">Contactez-nous</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Image Column -->
+            <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-column wow fadeInLeft">
+                  <!-- <div class="author-desc">
+                    <h2>Mamadou Gando Diallo</h2>
+                    <span>Web Developer</span>
+                  </div> -->
+                    <figure class="image-1"><a href="#" class="lightbox-image" data-fancybox="images"><img title="Rahul Kumar Yadav" src="{% static 'Logo_Lavandière_01.jpg' %}" alt=""></a></figure>
+                 
+                </div>
+            </div>
+          
+        </div>
+        <br>
+       <div class="sec-title">
+        <br>
+        <br>
+                        <span class="title">UN SAVOIR-FAIRE UNIQUE</span>
+                        <h2>Nous nous occupons de vos linges, quelque soit le type</h2>
+                    </div>
+      <div class="text">
+            La Lavandière est à votre disposition pour entretenir de manière durable votre linge professionnel :
+            <ul>
+                <li>
+                    Hôtellier
+                </li>
+                <li>
+                    Hospitalier
+                </li>
+                <li>
+                    Industrie
+                </li>
+                <li>
+                    Tenues de travail
+                </li>
+                <li>
+                    Blouses
+                </li>
+                <li>
+                    Bâches
+                </li>
+                <li>
+                   Stores, etc.
+                </li>
+            </ul>
+          </div>
+           <div class="text">
+            Un soin particulier sera apporté à vos linges <strong>Particuliers</strong> ainsi qu'aux matières les plus délicates pour une qualité équivalente aux stadards occidentaux.
+          </div>
+           <div class="text">                
+            <ul>
+                <li>
+                    Linges particulier
+                </li>
+                <li>
+                    Linges délicats
+                </li>
+                <li>
+                    Tapis
+                </li>
+                <li>
+                    Costumes, etc.
+                </li>
+            </ul>
+          </div>
+           <div class="text">
+            Nous proposons également une fléxibilité à nos clients avec un lavage express et une récupération du linge ouvert 24/24h dans nos locaux.
+          </div>
+           <div class="text">
+
+          </div>
+    </div>
+</section>
+
+
+{% endblock content %}
